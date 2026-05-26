@@ -15,8 +15,6 @@ public class Main {
         }
         System.out.println("Login successful!\n");
         while (true) {
-
-
             System.out.println("======= ATM Menu =========");
             System.out.println("1.Check Balance \n2.Deposit Money \n3.Withdraw Money \n4.Exit");
 
@@ -53,7 +51,6 @@ public class Main {
                 default:
                     System.out.println("Invalid option!");
             }
-
         }
     }
 }
