@@ -57,7 +57,7 @@ ID: 702 | Title: Unique | Status: Available | Duration: 14 mins [Type: DVD]
 4. Exit
 Choose option (1-4): 3
 Enter Item ID to checkout: 702
-Success! 'Inception' has been checked out.
+Success! 'Unique' has been checked out.
 
 ====== LIBRARY CATALOG =========
 1. Add Item
