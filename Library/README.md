@@ -21,8 +21,9 @@ Here is a live demonstration of how the application operates in the console, sho
 1. Add Item
 2. View Catalog
 3. Checkout Item
-4. Exit
-Choose option (1-4): 1
+4. Return Item
+5. Exit
+Choose option (1-5): 1
 Choose type (1 for Book, 2 for DVD): 1
 Enter ID: 501
 Enter Title: Java
@@ -33,8 +34,9 @@ Book Added!
 1. Add Item
 2. View Catalog
 3. Checkout Item
-4. Exit
-Choose option (1-4): 1
+4. Return Item
+5. Exit
+Choose option (1-5): 1
 Choose type (1 for Book, 2 for DVD): 2
 Enter ID: 702
 Enter Title: Unique
@@ -45,17 +47,19 @@ DVD Added!
 1. Add Item
 2. View Catalog
 3. Checkout Item
-4. Exit
-Choose option (1-4): 2
-ID: 501 | Title: Java | Status: Available | Author: Uknown [Type: Book]
+4. Return Item
+5. Exit
+Choose option (1-5): 2
+ID: 501 | Title: Java | Status: Available | Author: Unknown [Type: Book]
 ID: 702 | Title: Unique | Status: Available | Duration: 14 mins [Type: DVD]
 
 ====== LIBRARY CATALOG =========
 1. Add Item
 2. View Catalog
 3. Checkout Item
-4. Exit
-Choose option (1-4): 3
+4. Return Item
+5. Exit
+Choose option (1-5): 3
 Enter Item ID to checkout: 702
 Success! 'Unique' has been checked out.
 
@@ -63,7 +67,30 @@ Success! 'Unique' has been checked out.
 1. Add Item
 2. View Catalog
 3. Checkout Item
-4. Exit
-Choose option (1-4): 2
-ID: 501 | Title: Java | Status: Available | Author: Uknown [Type: Book]
+4. Return Item
+5. Exit
+Choose option (1-5): 2
+ID: 501 | Title: Java | Status: Available | Author: Unknown [Type: Book]
 ID: 702 | Title: Unique | Status: Checked Out | Duration: 14 mins [Type: DVD]
+
+====== LIBRARY CATALOG =========
+1. Add Item
+2. View Catalog
+3. Checkout Item
+4. Return Item
+5. Exit
+Choose option (1-5): 4
+Enter Item ID to return: 702
+Success! 'Unique' has been returned.
+
+====== LIBRARY CATALOG =========
+1. Add Item
+2. View Catalog
+3. Checkout Item
+4. Return Item
+5. Exit
+Choose option (1-5): 2
+ID: 501 | Title: Java | Status: Available | Author: Unknown [Type: Book]
+ID: 702 | Title: Unique | Status: Available | Duration: 14 mins [Type: DVD]
+```
+
