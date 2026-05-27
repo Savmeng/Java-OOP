@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -8,8 +7,8 @@ public class Main {
         Library library = new Library();
     while(true){
         System.out.println("====== LIBRARY CATALOG =========");
-        System.out.println("1.Add Item \n2.View Catalog \n3.Checkout Item \n4.Exit");
-        System.out.print("Choose option (1-4): ");
+        System.out.println("1.Add Item \n2.View Catalog \n3.Checkout Item \n4.Return Item \n5.Exit");
+        System.out.print("Choose option (1-5): ");
         int choice= Integer.parseInt(scanner.nextLine());
         switch(choice){
             case 1:
@@ -46,9 +45,25 @@ public class Main {
             case 3:
                 System.out.print("Enter Item ID to checkout: ");
                 int checkoutId= Integer.parseInt(scanner.nextLine());
-                library.checkoutItem(checkoutId);
+                LibraryItem item =
+                        library.findItem(checkoutId);
+
+                if(item == null) {
+
+                    System.out.println("Item not found.");
+
+                    break;
+                }
+                System.out.print("Enter Member name: ");
+                String memberName= scanner.nextLine();
+                library.checkoutItem(checkoutId,memberName);
                 break;
             case 4:
+                System.out.print("Enter Item ID to return: ");
+                int returnId= Integer.parseInt(scanner.nextLine());
+                library.returnItem(returnId);
+                break;
+            case 5:
                 System.out.println("Exiting...");
                 System.exit(0);
             default:
