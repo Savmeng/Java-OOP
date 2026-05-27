@@ -45,13 +45,10 @@ public class Main {
             case 3:
                 System.out.print("Enter Item ID to checkout: ");
                 int checkoutId= Integer.parseInt(scanner.nextLine());
-                LibraryItem item =
-                        library.findItem(checkoutId);
+                LibraryItem item = library.findItem(checkoutId);
 
                 if(item == null) {
-
                     System.out.println("Item not found.");
-
                     break;
                 }
                 System.out.print("Enter Member name: ");
