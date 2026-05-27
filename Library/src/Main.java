@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<LibraryItem> catalog = new ArrayList<>();
+        Library library = new Library();
     while(true){
         System.out.println("====== LIBRARY CATALOG =========");
         System.out.println("1.Add Item \n2.View Catalog \n3.Checkout Item \n4.Exit");
@@ -22,8 +22,9 @@ public class Main {
                     String title= scanner.nextLine();
                     System.out.print("Enter Author:");
                     String author= scanner.nextLine();
-                    catalog.add(new Book(id, title, author));
-                    System.out.println("Book Added!");
+                    Book book =new Book(id,title,author);
+                    library.addItem(book);
+
                 }
                 else if(chooseType==2) {
                     System.out.print("Enter ID:");
@@ -32,40 +33,20 @@ public class Main {
                     String title= scanner.nextLine();
                     System.out.print("Enter Duration (minutes):");
                     String duration= scanner.nextLine();
-                    catalog.add(new DVD(id, title,duration));
-                    System.out.println("DVD Added!");
+                    DVD dvd=new DVD(id,title,duration);
+                    library.addItem(dvd);
                 }
                 else {
                     System.out.println("Invalid type!");
                 }
                 break;
             case 2:
-                if (catalog.isEmpty()) {
-                    System.out.println("Catalog is empty.");
-                } else {
-                    for (LibraryItem item : catalog) {
-                        item.display();
-                    }
-                }
+                    library.viewCatalog();
                 break;
             case 3:
                 System.out.print("Enter Item ID to checkout: ");
                 int checkoutId= Integer.parseInt(scanner.nextLine());
-                boolean found=false;
-                for(LibraryItem item:catalog){
-                    if(item.getId()==checkoutId){
-                        if(!item.isCheckedOut()){
-                            item.checkout();
-                            System.out.println("Success! '" + item.getTitle() + "' has been checked out.");
-                        }
-                        else {
-                            System.out.println("Sorry, this item is already checked out!");
-                        }
-                        found=true;
-                        break;
-                    }
-                }
-                if (!found) System.out.println("Item not found.");
+                library.checkoutItem(checkoutId);
                 break;
             case 4:
                 System.out.println("Exiting...");

@@ -1,7 +1,7 @@
 class LibraryItem {
     private int id;
     private String title;
-    private boolean isCheckedOut = false;
+    private boolean isCheckedOut = false;;
 
     public LibraryItem(int id, String title) {
         this.id = id;
