@@ -67,7 +67,7 @@ public class Main {
                 System.out.println("Exiting...");
                 System.exit(0);
             default:
-                System.out.println("Invalid option! Please choose between 1-4.");
+                System.out.println("Invalid option! Please choose between 1-5.");
             }
         }
     }
